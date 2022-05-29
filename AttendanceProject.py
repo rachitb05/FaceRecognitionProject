@@ -59,7 +59,7 @@ while True:
             # print(faceDis)
             matchIndex = np.argmin(faceDis)
 
-            if matches[matchIndex] > 0.50:
+            if matches[matchIndex] < 0.50:
                 name = classNames[matchIndex].upper()
                 markAttendance(name)
             else: name = 'Unknown'
